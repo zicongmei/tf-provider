@@ -23,10 +23,6 @@ func resourceItem1() *schema.Resource {
 				Type:     schema.TypeString,
 				Optional: true,
 			},
-			"not_computed_required": {
-				Type:     schema.TypeString,
-				Required: true,
-			},
 			"foo": {
 				Type:     schema.TypeList,
 				Optional: true,

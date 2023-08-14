@@ -21,7 +21,7 @@ func Provider() *schema.Provider {
 			item1: resourceItem1(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{
-			item1: dataSourceExample(),
+			item1: dataSourceItem1(),
 		},
 	}
 }

@@ -1,5 +1,5 @@
 .idea
 vendor/
 terraform-provider-zicong
-tf-workspace/terraform.tfstate
+tf-workspace/terraform.tfstate*
 out/

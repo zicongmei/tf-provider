@@ -1,11 +1,22 @@
 terraform {
   required_providers {
-    zicong= {
-      source  = "registry.terraform.io/zicong/zicong"
+    zicong = {
+      version = "0.0.1"
+      source = "zicong/zicong"
     }
   }
 }
 
 provider "zicong" {
-  foo = "zicong_value"
+  base_url = "zicong_value"
+}
+
+resource "item1" "default" {
+  provider = zicong
+  foo {
+    bar {
+      number = 1
+    }
+  }
+
 }

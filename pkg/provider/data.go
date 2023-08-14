@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
-func dataSourceExample() *schema.Resource {
+func dataSourceItem1() *schema.Resource {
 	return &schema.Resource{
 		Read: dataSourceRead,
 		Schema: map[string]*schema.Schema{
