@@ -19,6 +19,10 @@ func resourceItem1() *schema.Resource {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
+			"created": {
+				Type:     schema.TypeString,
+				Computed: true,
+			},
 			"not_computed_optional": {
 				Type:     schema.TypeString,
 				Optional: true,
@@ -55,6 +59,8 @@ func resourceItem1() *schema.Resource {
 func resourceCreate(d *schema.ResourceData, m any) error {
 	d.SetId("123")
 	d.Set("last_updated", time.Now().Format(time.RFC850))
+	d.Set("created", time.Now().Format(time.RFC850))
+
 	return nil
 }
 
@@ -67,6 +73,7 @@ func resourceRead(d *schema.ResourceData, m any) error {
 		for _, b := range f["bar"].([]any) {
 			b := b.(map[string]any)
 			b["uuid"] = uuid.New().String()
+			b["number"] = 123
 		}
 	}
 

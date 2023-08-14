@@ -15,7 +15,7 @@ resource "item1" "default" {
   provider = zicong
   foo {
     bar {
-      number = 1
+      number = 345
     }
   }
 
