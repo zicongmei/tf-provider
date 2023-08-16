@@ -8,15 +8,18 @@ terraform {
 }
 
 provider "zicong" {
-  base_url = "zicong_value"
 }
 
-resource "item1" "default" {
+resource "resource1" "object1" {
   provider = zicong
-  foo {
-    bar {
-      number = 345
-    }
-  }
 
+  resource_key="key1"
+  resource_value="value2"
+}
+
+resource "resource2" "object2" {
+  provider = zicong
+
+  resource_key="key2"
+  resource_value="value22"
 }

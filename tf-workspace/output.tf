@@ -1,16 +1,19 @@
 output "last_updated" {
-  value = item1.default.last_updated
-}
-
-output "uuid" {
-  value = item1.default.foo[0].bar[0].uuid
+  value = resource1.object1.last_updated
 }
 
 output "id" {
-  value = item1.default.id
+  value = resource1.object1.id
 }
 
-
 output "created" {
-  value = item1.default.created
+  value = resource1.object1.created
+}
+
+output "resource1key" {
+  value = resource1.object1.resource_key
+}
+
+output "resource1value" {
+  value = resource1.object1.resource_value
 }
